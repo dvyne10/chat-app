@@ -1,4 +1,6 @@
 CHAT APP
 npm install in both folders.
-cd client and npm run start
-cd server and npm start
+```- cd client```
+```- npm run start```
+```- cd server```
+```- npm start```
