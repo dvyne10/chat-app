@@ -1,6 +1,6 @@
 # **CHAT APP**
 
-npm install in both folders.
+`$ npm install` in both folders.
 
 -` cd client`
 
