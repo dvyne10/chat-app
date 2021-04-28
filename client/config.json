@@ -1,0 +1,7 @@
+{
+    "port": 3000,
+    "authConfig": {
+        "clientId": "hIA9zwn2RD9TzeZLeZEVS0gDu2VkYduh",
+        "domain": "divine-dev.us.auth0.com"
+    }
+}

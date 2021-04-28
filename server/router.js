@@ -5,4 +5,8 @@ router.get("/", (req, res) => {
   res.send("server is up and running");
 });
 
+router.post("/user", (req, res) => {
+  console.log(req.body)
+});
+
 module.exports = router;

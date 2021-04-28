@@ -9,6 +9,7 @@ import { Join, Chat } from "./Pages";
 
 const App = () => {
   const { user, loginWithRedirect,isAuthenticated } = useAuth0();
+  console.log(user,'user');
 
   // if (!user && !isAuthenticated) {
   //   return null;

@@ -1,23 +1,32 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import onlineIcon from "../../Icons/onlineIcon.png";
 
 import "./users.css";
 
-const Users = ({ users }) => {
+const Users = ({ users, setRoom, setName,initiateChat}) => {
   return (
     <>
       <div className="textContainer">
         <div>
-          <h1>People currently online:</h1>
+          <h1>chats:</h1>
         </div>
         {users ? (
           <div>
             <div className="activeContainer">
               <h2>
                 {users.map(({ name }) => (
-                  <div key={name} className="activeItem" onClick={()=>{console.log('here')}}>
-                    {name}
-                    <img alt="Online Icon" src={onlineIcon} />
+                  <div key={name} className="activeItem">
+                    <button
+                      className="chatButton"
+                      onClick={() => {
+                        setRoom(name);
+                        setName(name);
+                        initiateChat(name)
+                      }}
+                    >
+                      {name}
+                      <img alt="Online Icon" src={onlineIcon} />
+                    </button>
                   </div>
                 ))}
               </h2>

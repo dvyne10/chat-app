@@ -4,17 +4,19 @@ import Message from "../Message";
 
 import "./messages.css";
 
-const Messages = ({ messages, name }) => {
+const Messages = ({ messages, name, room }) => {
   return (
     <>
       <ScrollToBottom className="messages">
-        {messages.map((message, i) => {
-          return (
-            <div key={i}>
-              <Message message={message} name={name} />
-            </div>
-          );
-        })}
+        {room &&
+          messages.map((message, i) => {
+            console.log(message)
+            return (
+              <div key={i}>
+                <Message message={message} name={name}/>
+              </div>
+            );
+          })}
       </ScrollToBottom>
     </>
   );
