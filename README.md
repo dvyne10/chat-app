@@ -2,10 +2,12 @@
 
 `$ npm install` in both folders.
 
--` cd client`
+` cd client`
 
--` npm run start`
+` npm run start`
 
--` cd server`
+` cd server`
 
--` npm start`
+` npm start`
+
+`docker-compose up`

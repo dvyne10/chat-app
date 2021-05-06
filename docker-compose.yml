@@ -1,0 +1,35 @@
+version: '3'
+services: 
+    client: 
+        image: chatapp-client
+        # stdin_open: true
+        ports: 
+            - "3000:3000"
+        networks: 
+            - chat-app
+
+    server:
+        image: chatapp-server
+        restart: always
+        ports: 
+            - "5000:5000"
+        depends_on:
+            - mongo
+        networks: 
+            - chat-app
+
+    mongo:
+        image: mongo:3.6.19-xenial
+        ports: 
+            - "27017:27017"
+        networks: 
+            - chat-app
+        volumes: 
+            - mongo-data:/data/db
+
+networks: 
+    chat-app:
+            driver: bridge
+volumes: 
+    mongo-data:
+        driver: local
