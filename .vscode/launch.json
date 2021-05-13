@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "console": "integratedTerminal",
+          "internalConsoleOptions": "neverOpen",
+          "name": "nodemon",
+          "program": "${workspaceFolder}/server/index.js",
+          "request": "launch",
+          "restart": true,
+          "runtimeExecutable": "nodemon",
+          "skipFiles": [
+              "<node_internals>/**"
+          ],
+          "type": "pwa-node"
+      },
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "name": "Launch Edge against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/client/src/index.js"
+    },
+    {
+      "name": "Debug CRA Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+      "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": { "CI": "true" },
+      "disableOptimisticBPs": true
+    }
+  ]
+}
