@@ -1,13 +1,11 @@
 # **CHAT APP**
 
-`$ npm install` in both folders.
+Copy and paste the command below into your terminal to install client and server packages.
 
-` cd client`
+`$ npm install` in both folders(client and server).
 
-` npm run start`
+` cd client` and run ` npm run start`
 
-` cd server`
+` cd server` and run ` npm start`
 
-` npm start`
-
-`docker-compose up`
+run `docker-compose up` to run the docker images for both the client and the server instances.
